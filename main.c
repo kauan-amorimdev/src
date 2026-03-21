@@ -15,5 +15,20 @@
         } 
     }
 int main(){
+    int l, c;
+            
+            printf("\nInforme a quantidade de linhas: ");
+            scanf("%d", &l);
+            printf("\nInforme a quantidade de colunas: ");
+            scanf("%d", &c);
+            
+            int tamTotal = l * c;
+            
+            int matA[tamTotal];
+            int matB[tamTotal];
+            int matC[tamTotal];
+            
+            preencherMatriz(matA, l, c, 'A');
+            preencherMatriz(matB, l, c, 'B');
     return 0;
 }
