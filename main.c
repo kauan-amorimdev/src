@@ -14,6 +14,25 @@
             }
         } 
     }
+// subprograma para somar matrizes.
+    void somarMatrizes(int *A, int *B, int *C, int tam){
+        for(int i = 0; i < tam; i++){
+            C[i] = A[i] + B[i]; 
+        }
+    }
+    
+// subprograma para exibir matrizes. 
+     void imprimirMatriz( int *mat, int lin, int colun, char name ){
+        
+        printf("---Exibindo Matriz %c---\n", name);
+        for(int i = 0; i < lin; i++){
+            for(int j = 0; j < colun; j++){
+                printf("%d ", mat[i * colun + j]);
+            }
+            printf("\n");
+        } 
+        
+    }
 int main(){
     int l, c;
             
@@ -29,6 +48,12 @@ int main(){
             int matC[tamTotal];
             
             preencherMatriz(matA, l, c, 'A');
+            imprimirMatriz(matA, l, c, 'A');
+           
             preencherMatriz(matB, l, c, 'B');
+            imprimirMatriz(matB, l, c, 'B');
+           
+            somarMatrizes(matA, matB, matC, tamTotal);
+            imprimirMatriz(matC, l, c, 'C');
     return 0;
 }
