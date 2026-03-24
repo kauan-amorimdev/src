@@ -30,7 +30,7 @@ void inserir(int li, int co, int colunas, int linhas, int vetor[linhas * colunas
     if (vetor[(li * colunas) + co] != 0)
     {
         int confirm;
-        printf("Item preenchido. deseja substituir? 1 para sim 0 para nao ");
+        printf("Item preenchido. Deseja substituir? 1 para sim 0 para nao ");
         scanf("%d", &confirm);
         if (confirm != 1)
         {
